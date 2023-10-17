@@ -1,0 +1,285 @@
+@font-face {
+  font-family: 'Staatliches';
+  src: url(../font/Staatliches-Regular.ttf);
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../font/Poppins-Regular.ttf);
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(../font/Poppins-Medium.ttf);
+  font-display: fallback;
+}
+
+body{
+	background-color: #fbfbfb;
+	color: #000;
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins';
+}
+
+header{
+	padding: 15px 50px;
+	background-color: #fff;
+
+	display: grid;
+	grid-template-columns: 1fr max-content;
+}
+
+header .logo{
+	text-transform: uppercase;
+	height: 70px;
+	font-size: 70px;
+	font-family: 'Staatliches';
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	color: #0a043c;
+}
+
+header .menu{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-self: center;
+}
+
+header .menu a{
+	font-size: 18px;
+	display: block;
+	padding: 5px 15px;
+	text-decoration: none;
+	color: #03506f;
+	border-bottom: 4px solid transparent;
+}
+
+header .menu a.active{
+	color: #0a043c;
+	border-bottom: 4px solid #03506f;
+}
+
+header .menu a:not(:last-child){
+	margin-right: 3px;
+}
+
+
+/* Main Section */
+
+main{
+	padding: 15px 30px;
+	display: grid;
+	grid-template-columns: 450px 1fr;
+	grid-column-gap: 20px;
+}
+
+.action-box{
+	display: inline-block;
+	position: sticky;
+	top: 15px;
+	left: 0;
+	width: 380px;
+
+	padding: 5px 30px;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.action-box .title{
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-bottom: 3px;
+	color: #03506f;
+	border-bottom: 3px solid #03506f;
+}
+
+.group-2{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 10px;
+}
+
+form .input-group{
+	margin-bottom: 15px;
+}
+
+form label{
+	display: block;
+	font-size: 16px;
+	margin-bottom: 3px;
+}
+
+form select{
+	width: 100%;
+}
+
+form button.frm-btn{
+	font-size: 16px;
+	padding: 8px 20px;
+	background-color: #03506f;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all .25s;
+	width: 100%;
+	margin: 10px 0;
+}
+
+form button.frm-btn:hover{
+	background-color: #0a043c;
+}
+
+
+footer{
+	padding: 10px 50px;
+	font-size: 12px;
+	color: #999;
+	display: grid;
+	grid-template-columns: 1fr max-content;
+}
+
+footer a{
+	text-decoration: none;
+	color: #999;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+.alert{
+	padding: 10px 50px;
+
+	display: grid;
+	grid-template-columns: 1fr max-content;
+}
+
+.alert-success{
+	background-color: #9ecca4;
+	color: #1f441e;
+}
+
+.alert-update{
+	background-color: #eeb76b;
+	color: #d44000;
+}
+
+.alert-btn{
+	display: inline-block;
+	background-color: #03506f;
+	color: #fff;
+	padding: 5px 20px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-family: inherit;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	transition: all .25s;
+	text-decoration: none;
+}
+
+.alert-close{
+	display: grid;
+	align-self: center;
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+.alert-btn:hover{
+	background-color: #0a043c;
+}
+
+.alert-link{
+	color: inherit;
+	font-size: 12px;
+}
+
+.alert-link:hover{
+	text-decoration: underline;
+}
+
+.dropzone {
+  border: 2px dashed #03506f;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  display: block;
+}
+.dropzone .dropzone-container {
+  padding: 2rem 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8c96a8;
+  z-index: 20;
+}
+.dropzone .dropzone-container .dropzone-title {
+  padding-top: 1.5rem;
+}
+.dropzone .dropzone-container .browse {
+  text-decoration: underline;
+  color: #007bff;
+}
+.dropzone .file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.file-icon {
+  /* Need position to allow stacking of pseudo-elements */
+  position: relative;
+  width: 4rem;
+  height: 5.25rem;
+  /* Padding for demo purposes */
+  padding: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #007bff;
+  /* Second sheet of paper */
+}
+.file-icon, .file-icon:before, .file-icon:after {
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  border: 0.125rem solid #b8bec9;
+}
+.file-icon:before, .file-icon:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0.125rem solid #ccd0d8;
+}
+.file-icon:before {
+  left: -0.625rem;
+  top: 0.5rem;
+  z-index: -1;
+}
+.file-icon:after {
+  top: -0.25rem;
+  right: -0.25rem;
+  left: auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+  border-width: 0.625rem;
+  border-style: solid;
+  border-color: #f9f9fb #f9f9fb #b8bec9 #b8bec9;
+}
